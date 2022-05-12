@@ -50,7 +50,7 @@ import java.util.Map;
  *
  * @author Greg Schueler <a href="mailto:greg@dtosolutions.com">greg@dtosolutions.com</a>
  */
-class StepPluginAdapter implements StepExecutor, Describable, DynamicProperties{
+public class StepPluginAdapter implements StepExecutor, Describable, DynamicProperties{
     public static final Convert CONVERTER = new Convert();
     private StepPlugin plugin;
 
