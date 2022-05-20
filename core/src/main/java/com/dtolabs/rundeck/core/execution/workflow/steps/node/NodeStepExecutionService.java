@@ -131,7 +131,7 @@ public class NodeStepExecutionService
         }
 
         //convert (original)NodeStepPlugin -> NodeStepExecutor
-        nodeStepPluginAdaptedNodeStepExecutorService = getNodeStepPluginService().adapter(getNodeStepAdapter());
+        nodeStepPluginAdaptedNodeStepExecutorService = getNodeStepPluginService().adapter(NodeStepPluginAdapter.CONVERT_TO_NODE_STEP_EXECUTOR);
 
 
         chainedNodeStepPluginService = new ChainedNodeStepPluginService(
@@ -275,9 +275,5 @@ public class NodeStepExecutionService
 
     public RemoteScriptNodeStepPluginService getRemoteScriptNodeStepPluginService() {
         return remoteScriptNodeStepPluginService;
-    }
-
-    public Converter<NodeStepPlugin, NodeStepExecutor> getNodeStepAdapter(){
-        return NodeStepPluginAdapter.CONVERT_TO_NODE_STEP_EXECUTOR;
     }
 }
