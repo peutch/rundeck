@@ -138,7 +138,7 @@ class FileUploadService {
         // Validate received filename.
         if(origName && origName =~ ILLEGAL_FILENAME_CHARACTERS) {
             throw new FileUploadServiceException(
-                "Illegal filename: ${origName.encodeAsSanitizedHTML()}"
+                "Illegal filename: ${origName}"
             )
         }
         
